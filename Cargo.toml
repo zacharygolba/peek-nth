@@ -1,0 +1,13 @@
+[package]
+name = "peek-nth"
+version = "0.1.0"
+authors = ["Zachary Golba <zachary.golba@postlight.com>"]
+categories = ["rust-patterns"]
+description = "An iterator adapter that allows you to efficiently peek the nth item of an iterator."
+keywords = ["cache", "data-structure", "iterator", "peek", "nth"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/zacharygolba/peek-nth"
+
+[dependencies]
+smallvec = "0.6.0"
