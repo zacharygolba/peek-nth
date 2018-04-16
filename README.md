@@ -12,7 +12,7 @@ First, add `peek-nth` to the dependencies section of your `Cargo.toml`:
 
 ```toml
 [dependencies]
-peek-nth = "0.1"
+peek-nth = "0.2"
 ```
 
 Next, add the following snippet to the entry point of your crate (`lib.rs` or `main.rs`):

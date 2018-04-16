@@ -1,6 +1,6 @@
 [package]
 name = "peek-nth"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Zachary Golba <zachary.golba@postlight.com>"]
 categories = ["rust-patterns"]
 description = "An iterator adapter that allows you to efficiently peek the nth item of an iterator."
