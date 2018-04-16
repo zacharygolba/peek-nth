@@ -62,13 +62,20 @@ impl<I> PeekableNth<I>
 where
     I: Iterator,
 {
+    /// Returns a reference to the next value without advancing the iterator.
+    #[inline]
+    pub fn peek(&mut self) -> Option<&I::Item> {
+        self.peek_nth(0)
+    }
+
     /// Returns a reference to the nth(n) value without advancing the iterator.
     #[inline]
     pub fn peek_nth(&mut self, n: usize) -> Option<&I::Item> {
-        let len = self.next.len();
+        let length = self.next.len();
+        let offset = n + 1;
 
-        if n >= len {
-            for _ in len..n + 1 {
+        if offset > length {
+            for _ in length..offset {
                 self.next.push(self.iter.next()?);
             }
         }
