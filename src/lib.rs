@@ -22,7 +22,6 @@
 //! }
 //!```
 
-extern crate smallvec;
 
 use std::iter::{DoubleEndedIterator, ExactSizeIterator};
 
