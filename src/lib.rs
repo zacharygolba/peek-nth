@@ -22,7 +22,6 @@
 //! }
 //!```
 
-
 use std::iter::{DoubleEndedIterator, ExactSizeIterator};
 
 use smallvec::SmallVec;
