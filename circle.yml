@@ -21,7 +21,7 @@ jobs:
             - /usr/local/cargo
       - run:
           name: Checking Style
-          command: cargo fmt -- --error-on-unformatted --write-mode diff
+          command: cargo fmt -- --check
       - run:
           name: Running Clippy
           command: cargo clippy
