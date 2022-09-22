@@ -14,17 +14,17 @@ jobs:
             rustup install stable nightly
             rustup default stable
             rustup component add rustfmt-preview
-            cargo +nightly install clippy --force
+            rustup component add clippy
       - save_cache:
           key: cache-{{ checksum "circle.yml" }}
           paths:
             - /usr/local/cargo
       - run:
           name: Checking Style
-          command: cargo fmt -- --error-on-unformatted --write-mode diff
+          command: cargo fmt -- --check
       - run:
           name: Running Clippy
-          command: cargo +nightly clippy
+          command: cargo clippy
       - run:
           name: Running Tests
           command: cargo test
